@@ -30,11 +30,11 @@
             </dependency>
         </dependencies>
     ```
-4. 在resource文件夹增加一个application.yml文件,然后配置
+4. 在resource文件夹增加一个application.yml文件,然后配置数据库
     ```yaml
         spring:
           datasource:
-            url: jdbc-url #如 jdbc:mysql://localhost:3306/DB_Name?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&autoReconnectForPools=true&useSSL=true&createDatabaseIfNotExist=true
+            url: jdbc:mysql://localhost:3306/DB_Name?useSSL=true&createDatabaseIfNotExist=true
             username: 用户名
             password: 密码
     ```
@@ -43,7 +43,7 @@
         @SpringBootApplication
         public class App {
             public static void main(String[] args) {
-                SpringApplication.run(Application.class, args);
+                SpringApplication.run(App.class, args);
             }
         }
     ```
